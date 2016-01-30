@@ -12,6 +12,7 @@ resources  :categories do
 		resources :exercises
 	end
 end
+get '/exercises/new', to: 'exercises#new'
 get '/signup', to:'users#new'
 post '/users',to:'users#create'
 get '/login',to:"sessions_controller#new"

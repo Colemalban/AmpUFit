@@ -12,9 +12,9 @@
 
 	<div class="panel-body">
 		<table class="table">
-			<tr> <td> <span>Filler text</span>
-				 </td> </tr>
-			
+		<% var.exercises.each  do |workout|%>
+ 			<tr> <td> <span><%=workout.name%></span> </td> </tr>
+ 			<%end%>	
 			
 			</table>
 	</div>
