@@ -1,0 +1,22 @@
+<div class="center">
+<%= form_for @workout, url:{action: "create"}, html: {multipart: true, class: "form-horizontal"} do |f| %>
+<div class="form-group">
+<%= text_area_tag(:description, "Hello world", size: "24x6") %>
+</div>
+<div class="form-group">
+<%= f.text_field :name  %>
+</div>
+
+<div class="form-group">
+<%= f.label :image %>
+<%= f.file_field :image, class: 'form-control'%>
+<%= radio_button_tag(:focus_area_id, 1) %>
+<%= label_tag(:focus_area_id_1, "Cardio") %>
+<%= radio_button_tag(:focus_area_id, 2) %>
+<%= label_tag(:focus_area_id_2, "Weight") %>
+<%= radio_button_tag(:focus_area_id, 3) %>
+<%= label_tag(:focus_area_id_3, "Low Intensity") %>
+</div>
+<%= f.submit "Upload" , class: 'btn btn-primary'  %>
+<% end %>
+</div>
