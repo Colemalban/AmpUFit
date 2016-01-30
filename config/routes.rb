@@ -12,7 +12,7 @@ resources  :categories do
 		resources :exercises
 	end
 end
-get '/map' to: 'map#index'
+get '/map', to: 'map#index'
 get '/exercises/new', to: 'exercises#new'
 get '/signup', to:'users#new'
 post '/users',to:'users#create'
