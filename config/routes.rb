@@ -14,7 +14,9 @@ resources  :categories do
 end
 get '/signup', to:'users#new'
 post '/users',to:'users#create'
-  
+get '/login',to:"sessions_controller#new"
+post '/login',to:"sessions_controller#create"
+get '/logout',to:"sessions_controller#destroy"
 
     
 	
