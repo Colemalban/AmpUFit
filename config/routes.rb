@@ -12,12 +12,14 @@ resources  :categories do
 		resources :exercises
 	end
 end
+get '/map', to: 'map#index'
+get '/exercises/new', to: 'exercises#new'
 get '/signup', to:'users#new'
 post '/users',to:'users#create'
 get '/login',to:"sessions_controller#new"
 post '/login',to:"sessions_controller#create"
 get '/logout',to:"sessions_controller#destroy"
-
+post '/categories', to: "categories#create"
     
 	
   root 'categories#index'
