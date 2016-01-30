@@ -7,5 +7,8 @@ class WorkoutCategoriesController < ApplicationController
 		@workout_category=@category.workout_categories.create(workout_category_params)
 		redirect_to category_path(@category)
 	end
+	def workout_category_params
+		params.require(:workout_category).permit(:name)
+	end
 end
 
