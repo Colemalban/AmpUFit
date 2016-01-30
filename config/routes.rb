@@ -7,10 +7,15 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   get 'categories/about',to:'categories#about'
   # root 'welcome#index'
+resources  :categories do
+	resources :workout_categories do
+		resources :workouts
+	end
+end
+  
 
-  resources :categories
-
-    resources :disability
+    
+	
   root 'categories#index'
 
 
