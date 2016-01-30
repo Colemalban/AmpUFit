@@ -12,6 +12,8 @@ resources  :categories do
 		resources :exercises
 	end
 end
+get '/signup', to:'users#new'
+post '/users',to:'users#create'
   
 
     

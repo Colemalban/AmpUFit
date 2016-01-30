@@ -22,6 +22,18 @@
 	
 </div>
 <%end%>
-<%= link_to "Add a new workout category",new_category_workout_category_path(@workout.id)%>
+<h2 class="workout-category-form-header">Create a new workout</h2>
+<div class="form-container">
+ <%= form_for([@workout, @workout.workout_categories.build]) do |f| %>
+ 	<p>
+		<%=f.label :name%>
+		<%=f.text_field :name%>
+	</p>
+	<br>
+	<p>
+		<%=f.submit%>
+	</p>
+	<%end%>
+</div>
  </div>
  </div>
