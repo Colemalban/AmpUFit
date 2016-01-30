@@ -1,4 +1,5 @@
 class WorkoutCategoriesController < ApplicationController
+	before_filter :authorize
 	def new
 		@workout_category=WorkoutCategory.new
 	end
