@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 resources  :categories do
 	resources :workout_categories do
-		resources :workouts
+		resources :exercises
 	end
 end
   
