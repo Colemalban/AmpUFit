@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130145617) do
+ActiveRecord::Schema.define(version: 20160130164147) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -31,9 +31,13 @@ ActiveRecord::Schema.define(version: 20160130145617) do
     t.string   "name"
     t.string   "equipment"
     t.string   "difficulty"
-    t.integer  "workout_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "workout_category_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "workout_categories", force: :cascade do |t|
