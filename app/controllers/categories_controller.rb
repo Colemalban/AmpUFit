@@ -6,6 +6,6 @@ class CategoriesController < ApplicationController
 	end
 	def show
 		@workout = Category.find(params[:id])
-		@workout_categories = WorkoutCategory.where(category_id:params[:id])
+		@workout_categories = @workout.workout_categories
 	end
 end
