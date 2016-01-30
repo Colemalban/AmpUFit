@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+3.times do |i|
+	if i == 0
+		Category.create(id: i+1, name: "legs")
+	elsif i == 1
+		Category.create(id:i+1, name: "arms")
+	else 
+		Category.create(id:i+1, name: "other")
+	end
+end 
