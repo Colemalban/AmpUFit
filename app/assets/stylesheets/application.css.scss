@@ -15,3 +15,16 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .headline{
+ 	margin:0 auto;
+	text-align:center;
+ }
+.main_container{
+	width:100%;
+	display:block;
+}
+.category_link{
+	dispay:block;
+	margin: 0 auto;
+}
