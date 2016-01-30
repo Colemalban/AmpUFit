@@ -19,7 +19,8 @@ list = ["Abs", "Barre", "Cardio and HIIT", "Lower Body", "Total Body", "Treadmil
 "Upper Body", "Zumba"]
 
 
-40.times do |i| 
-	WorkoutCategory.create(id: i+1, name: list[rand(0..7)], category_id: rand(1..3))
+54.times do |i|
+	 
+	WorkoutCategory.create(name: list[rand(0..7)], category_id: rand(1..3))
 end
  
