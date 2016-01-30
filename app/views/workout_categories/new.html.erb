@@ -1,3 +1,11 @@
 <h1>Create a new form here!</h1>
 <%= form_for @workout_category do |f| %>
-
+	<p>
+		<%=f.label :name%>
+		<%=f.text_field :name%>
+	</p>
+	<br>
+	<p>
+		<%=f.submit%>
+	</p>
+<%end%>
