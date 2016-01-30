@@ -1,6 +1,6 @@
 <h1>Sign up for AUF here!</h1>
 <%=form_for :user, url:'/users' do |f| %>
-	Name: <%= f.text_field :name %>
+	Name: <%= f.text_field :user_name %>
 	Email: <%= f.text_field :email %>
 	Password: <%= f.password_field :password %>
 	Password Confirmation: <%= f.password_field :password_confirmation %>

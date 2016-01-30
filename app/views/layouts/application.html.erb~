@@ -21,7 +21,7 @@
 </header>
  <div class="row">
         <div class="jumbotron">
-          <h1 class="headline"><%=image_tag"LogoAUFwb"%></h1>
+          <h1 class="headline"><%=link_to "Amp U Fit",root_path%></h1>
 		  <h3 class="headline">"Making life more fit, one muscle at a time."</h3>
         </div>
 	  </div>
@@ -31,10 +31,6 @@
                <%= yield %>
       </div>
     </div>
-<%if current_user%>
-	<h1>LOGGED IN</h1>
-<%else%>
-	<h1>NOT LOGGED IN</h1>
-<%end%>
+
 </body>
 </html>
