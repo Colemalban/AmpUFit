@@ -3,7 +3,9 @@
 	<%=@categories.each do |var|%>
 		<div class="col-md-4">
 			<div class="thumbnail">
-				<%=var.name%>
+                <% if var.id==1%>
+                    <%=image_tag "Legs1",id:"leg_image"%>
+                <%end%>
 			</div>
 		</div>
 	<%end%>

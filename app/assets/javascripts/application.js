@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$("#leg_image").hover(function(){
+     $(this).attr('src', '/app/assets/images/stock_photo.jpg');
+});
