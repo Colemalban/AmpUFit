@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130110453) do
+ActiveRecord::Schema.define(version: 20160130124652) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -26,9 +26,19 @@ ActiveRecord::Schema.define(version: 20160130110453) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "workout_categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "workouts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "workout_categories_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "focus_area_id"
   end
+
+  add_index "workouts", ["workout_categories_id"], name: "index_workouts_on_workout_categories_id"
 
 end

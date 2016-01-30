@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :static_pages
   resources :categories
+get '/disability/legs' => 'disability#showlegs'
+get '/disability/arms' => 'disability#showarms'
+get '/disability/other' => 'disability#showother'
     resources :disability
   root 'categories#index'
 
