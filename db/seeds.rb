@@ -13,4 +13,13 @@
 	else 
 		Category.create(id:i+1, name: "other")
 	end
-end 
+end
+
+list = ["Abs", "Barre", "Cardio and HIIT", "Lower Body", "Total Body", "Treadmill Workouts", 
+"Upper Body", "Zumba"]
+
+
+40.times do |i| 
+	WorkoutCategory.create(id: i+1, name: list[rand(0..7)], category_id: rand(1..3))
+end
+ 
