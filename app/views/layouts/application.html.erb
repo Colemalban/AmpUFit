@@ -10,17 +10,21 @@
 <body>
 <header>
   <div class="row">
-    <div class="col-md-6" id="tit_bar">
+    <div class="col-md-4" id="tit_bar">
       <h4>Ampufit</h4>
       </div>
-    <div class="col-md-6">
+	 <div class="col-md-4">
+
+	 </div>
+    <div class="col-md-4">
 	<div class="dropdown">
 		<button class="btn btn-default  dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-align-center" aria-hidden="true"></span></button>
 		<ul class="dropdown-menu">
 			<li><%=link_to "About",categories_about_path%></li>
-			<li>All categores</li>
-			<li>Some other things</li>
-			<li>Other stuff</li>
+			<li><%=link_to "Home",root_path%></li>
+			<li><%=link_to "My Account",root_path %></li>
+			<li><%=link_to "Sign up",signup_path%></li>
+			<li><%=link_to "Map",map_path%></li>
 		</ul>
 		</div>
 
@@ -29,7 +33,7 @@
 </header>
  <div class="row">
         <div class="jumbotron">
-          <h1 class="headline"><%=image_tag"LogoAUFwb",id:"logo"%></h1>
+          <h1 class="headline"><%=link_to"#{image_tag"LogoAUFwb",id:"logo"}".html_safe,root_path%></h1>
 		  <h3 class="headline">"Making life more fit, one muscle at a time."</h3>
         </div>
 	  </div>
