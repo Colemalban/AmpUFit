@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="panel-group" id="accordion">
-		<%=@workout_categories.each do |var|%>
+		<%@workout_categories.each do |var|%>
 			<div class="panel panel-default">
 				<div class="panel-heading">
 				<h4 class="panel-title">
@@ -12,10 +12,9 @@
 
 	<div class="panel-body">
 		<table class="table">
-			<%= Workout.where(workout_category_id:var.id).each do |workout|%>
+			<% var.workouts.each  do |workout|%>
 			<tr> <td> <span><%=workout.name%></span> </td> </tr>
 			<%end%>
-			<tr><td><%=link_to "Add an exercise!",new_workout_path%></td></tr>
 			
 			</table>
 	</div>
