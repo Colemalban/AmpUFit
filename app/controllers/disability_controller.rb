@@ -3,4 +3,6 @@ class DisabilityController < ApplicationController
   
 	@workoutlist = Workout.all
 	end
+	def index
+	end
 end

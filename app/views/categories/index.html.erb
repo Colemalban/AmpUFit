@@ -4,8 +4,13 @@
 		<div class="col-md-4">
 			<div class="thumbnail">
                 <% if var.id==1%>
-                    <%=image_tag "Legs1",id:"leg_image"%>
+					<%= link_to "#{image_tag("Legs1")}".html_safe,disability_index_path%>
+                <%elsif var.id==2%>
+					<%=link_to "#{image_tag("arm_img")}".html_safe,disability_index_path%>
+                <%else%>
+                    <%=link_to "#{image_tag("other_img")}".html_safe,disability_index_path%>
                 <%end%>
+                
 			</div>
 		</div>
 	<%end%>
