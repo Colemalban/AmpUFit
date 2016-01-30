@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/disability' => "disability#index"
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,11 +7,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   get 'categories/about',to:'categories#about'
   # root 'welcome#index'
-  resources :static_pages
+
   resources :categories
-get '/disability/legs' => 'disability#showlegs'
-get '/disability/arms' => 'disability#showarms'
-get '/disability/other' => 'disability#showother'
+
     resources :disability
   root 'categories#index'
 
