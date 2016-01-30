@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workout_id: 1
+  description: MyString
+  disability_id: 
+  info: MyString
+
+two:
+  workout_id: 1
+  description: MyString
+  disability_id: 
+  info: MyString
