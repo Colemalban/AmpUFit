@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :static_pages
   resources :categories
-  root 'static_pages#index'
+  root 'categories#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
