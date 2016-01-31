@@ -2,7 +2,7 @@
 
 </h1>
 
-<%= form_for @exercise, html: { multipart: true } do |f| %>
+<%= form_for @exercise,url:{action:"create"} do |f| %>
 	<% if @exercise.errors.any? %>
 	<div id=“error_explanation”>
 		<h2><%= pluralize(@exercise.errors.count, “error”) %> prohibited this workout from being saved</h2>
@@ -16,11 +16,6 @@
 <div class=“field”>
 	<%= f.label :name %> <br>
 	<%= f.text_field :name %>
-</div>
-
-<div class=“field”>
-	<%= f.label :image %><br>
-	<%= f.file_field :image %>
 </div>
 
 <div class=“field”>
