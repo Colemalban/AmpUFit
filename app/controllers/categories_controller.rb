@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-	before_filter :authorize,except:[:index]
+	before_action :authorize
 	def index
 
 
