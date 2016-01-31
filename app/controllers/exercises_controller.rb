@@ -12,13 +12,13 @@ class ExercisesController < ApplicationController
 		@exercise = Exercise.find(params[:exercise_id])
 		@exercise.votes = @exercise.votes - 1
 		@exercise.save
-		redirect_to category_path(params[:category_id]) 
+		redirect_to category_workout_category_exercise_path(:category_id,:workout_category_id,@exercise) 
 	end
 	def up
 		@exercise = Exercise.find(params[:exercise_id])
 		@exercise.votes = @exercise.votes + 1
 		@exercise.save
-		redirect_to category_path(params[:category_id]) 
+		redirect_to category_workout_category_exercise_path(:category_id,:workout_category_id,@exercise) 
 	end
 	def create
 		@category=Category.find(params[:category_id])
