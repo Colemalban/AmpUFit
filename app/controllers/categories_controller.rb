@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
+	before_filter :authorize,except:[:index]
 	def index
+
+
 		@categories = Category.all
 	end
 	def about
