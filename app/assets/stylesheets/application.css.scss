@@ -21,6 +21,12 @@
 	   max-height:100%;
 
  }
+#sign_in_header{
+	padding-top:5px;
+}
+#sign_up_header{
+	padding-top:10px;
+}
 .dropdown-menu{
 	margin-left:60%;
 
@@ -28,12 +34,21 @@
 }
 #profile-area{
 	display:block;
-	margin:0 auto;
+	
 }
 a:link,a:visited,a:hover,a:active{
 	color:black;
 	text-decoration:none;
 
+}
+
+#fnd_tit {
+	 text-align: center;
+}
+
+#abt_photo {
+	   margin: 0 auto;
+	   text-align: center;
 }
 
 #tit_bar {
@@ -109,4 +124,7 @@ padding:5px;
 			 p{
 			 	margin: 0 auto;
 			 }
+}
+.header_login{
+	
 }

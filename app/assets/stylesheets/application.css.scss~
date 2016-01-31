@@ -21,9 +21,14 @@
 	   max-height:100%;
 
  }
+.dropdown-menu{
+	margin-left:60%;
+
+	padding-left:2%;
+}
 #profile-area{
 	display:block;
-	margin:0 auto;
+	
 }
 a:link,a:visited,a:hover,a:active{
 	color:black;
@@ -31,8 +36,13 @@ a:link,a:visited,a:hover,a:active{
 
 }
 
+#abt_photo {
+	   margin: 0 auto;
+	   text-align: center;
+}
+
 #tit_bar {
-	 padding-left: 5%;
+	 padding-left: 2%;
 	 text-align: left;
 	
 }

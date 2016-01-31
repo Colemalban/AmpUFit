@@ -12,4 +12,5 @@ Rails.application.config.assets.precompile += %w( other_img.jpg )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-Rails.application.config.assets.precompile += %w( LogoAUFwb.jpg )
+Rails.application.config.assets.precompile += %w( Cole.jpg )
+Rails.application.config.assets.precompile += %w( Shawn.jpg )
