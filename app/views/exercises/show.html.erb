@@ -35,10 +35,12 @@
 		<% @exercise.save %>
 		<% end %>
 		<div class="col-md-3">
-		<%=link_to category_workout_category_exercise_favorite_path(params[:category_id],params[:workout_category_id],@exercise,@current_user),method: :post do%><button type="button" class="btn btn-default btn-lg">
+		<%= link_to category_workout_category_exercise_favorite_path(params[:category_id],params[:workout_category_id],@exercise,@current_user), :method => :post do%>
+			<button type="button" class="btn btn-default btn-lg">
 			<div class="row-center"><span style="align: center;"class="glyphicon glyphicon-floppy-disk"></span></div>
-			<div class="row"><p class="lead"></p></div>
-			</button><%end%>
+			<div class="row"><p class="lead">Save for Later!</p></div>
+			</button>
+		<%end%>
 		</div>
 		<div class="col-md-5">
 			<%= link_to  category_workout_category_exercise_Downvote_path(params[:category_id],  params[:workout_category_id], params[:id]), :method => :put do %>

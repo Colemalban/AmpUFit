@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20160131104244) do
     t.integer  "workout_category_id"
   end
 
+  create_table "disabilities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "disability_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "exercises", force: :cascade do |t|
     t.string   "name"
     t.string   "equipment"
@@ -47,6 +54,15 @@ ActiveRecord::Schema.define(version: 20160131104244) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_friendships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_friendships", ["user_id", "friend_id"], name: "index_user_friendships_on_user_id_and_friend_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "user_name"
     t.string   "email"
@@ -65,5 +81,21 @@ ActiveRecord::Schema.define(version: 20160131104244) do
     t.string   "name"
     t.integer  "category_id"
   end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "workout_categories_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "focus_area_id"
+    t.integer  "workout_category_id"
+  end
+
+  add_index "workouts", ["workout_categories_id"], name: "index_workouts_on_workout_categories_id"
 
 end
