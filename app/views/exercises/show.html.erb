@@ -4,18 +4,22 @@
 			<thead>
 				<tr>
 					<th>Name</th>
-					<th>Difficulty</th>
+					<th>Description</th>
 					<th>Equipment</th>
 				</tr>
 				<tr>
 					<td><%=@exercise.name%></td>
 					<td><%=@exercise.difficulty%></td>
-					<td>TBA</td>
+					<% if @exercise.equipment == nil %>
+					<td>N/A</td>
+					<% else %>
+					<td><%= @exercise.equipment %> </td>
+					<%end%>
 				</tr>
 			</thead>
 		</table>
 	</div>
 	<div class="col-md-6">
-		Fill in description here
+		<%= @exercise.difficulty %>Fill in description here
 	</div>
 </div>

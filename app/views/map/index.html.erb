@@ -9,26 +9,39 @@
     </style>
   </head>
   <body>
-<div class="row">
+<div class="row row-eq-height">
 <div class="col-md-8">
     <h1>Find buddies around you!</h1>
     <div id="map"></div>
     <script>
       function initMap() {
-        var mapDiv = document.getElementById('map');
+        var myLatLng = {lat: 38.8951100, lng: -77.0363700};
+
+	var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-          center: {lat: 38.8951100, lng: -77.0363700},
+          center: myLatLng,//{lat: 38.8951100, lng: -77.0363700},
           zoom: 8
         });
-      } 
+      	var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'testmsg'
+		});	
+      	var myLatLng2 = {lat: 30.9211111, lng:-73.0232323};
+	var marker2 = new google.maps.Marker({
+		position: myLatLng2,
+		map: map,
+		title: 'testmsg2'
+		});	
+	} 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbSyQZRUgxJt-tF6FbT2tCRg7dbefEmi4&signed_in=true&callback=initMap"
         async defer></script>
 </div>
-<H1>Ampufitters around you!</h1>
-<div class="col-md-4">
-<div class="media">
+<H1>AmpUFitters around you!</h1>
+<div style="height: 450px; overflow: scroll;" class="col-md-4">
 <% @tweets.each do |t| %>
+<div class="media">
 <div class="media-left media-middle">
 <a href="http://umd.edu">
 <img class="media-object" src="<%= t.user.profile_image_url %>"/>
