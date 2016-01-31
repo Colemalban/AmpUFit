@@ -8,6 +8,18 @@ class ExercisesController < ApplicationController
 		@exercise = Exercise.find(params[:id])
 	end
 
+	def down
+		@exercise = Exercise.find(params[:exercise_id])
+		@exercise.votes = @exercise.votes - 1
+		@exercise.save
+		redirect_to category_path(params[:category_id]) 
+	end
+	def up
+		@exercise = Exercise.find(params[:exercise_id])
+		@exercise.votes = @exercise.votes + 1
+		@exercise.save
+		redirect_to category_path(params[:category_id]) 
+	end
 	def create
 		@category=Category.find(params[:category_id])
 		@exercise=WorkoutCategory.find(params[:workout_category_id]).exercises.build(exercise_params)
@@ -19,7 +31,7 @@ class ExercisesController < ApplicationController
 	end
 	private
 	def exercise_params
-		params.require(:exercise).permit(:name,:image,:difficulty,:category_id,:workout_category_id)
+		params.require(:exercise).permit(:name,:image,:difficulty,:equipment,:category_id,:workout_category_id)
 	end
 		
 

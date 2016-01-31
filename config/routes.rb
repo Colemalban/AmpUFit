@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 resources  :categories do
 	resources :workout_categories do
-		resources :exercises
+		resources :exercises do
+			put 'Upvote' => 'exercises#up'
+			put 'Downvote' => 'exercises#down'
+		end
 	end
 end
 get '/map', to: 'map#index'
@@ -20,8 +23,6 @@ get '/login',to:"sessions_controller#new"
 post '/login',to:"sessions_controller#create"
 get '/logout',to:"sessions_controller#destroy"
 post '/categories', to: "categories#create"
-    
-	
   root 'categories#index'
 
 
