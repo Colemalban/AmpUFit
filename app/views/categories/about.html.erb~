@@ -1,8 +1,6 @@
 
-<div id="fnd_tit">
-<h1>Founders</h1>
-</div>
 
+<h1>Founders</h1>
 <div class="row" id="profile-area">
 	
   <%3.times do |i| %>
