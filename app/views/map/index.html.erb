@@ -29,13 +29,13 @@
 <div class="col-md-4">
 <div class="media">
 <% @tweets.each do |t| %>
-<div class="media-left">
+<div class="media-left media-middle">
 <a href="http://umd.edu">
 <img class="media-object" src="<%= t.user.profile_image_url %>"/>
 </a></div>
 <div class="media-body">
-<h4 class="media-heading"><a style="color: #6B6BE2;" href="<%= t.user.url %>"@><%= t.user.screen_name %></a></h4>
-<span> <%= t.text %> </span>
+<h3 class="media-heading"><a style="color: #6B6BE2;" href="<%= t.user.url %>">@<%= t.user.screen_name %></a></h3> <h6> <%= t.created_at.to_time.strftime("%H:%M %P") %> </h6> 
+<h4> <%= t.text %> </h4>
 </div>
 </div>
 <% end %>
