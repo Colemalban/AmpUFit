@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 	end
 	def show
 		@user = User.find(params[:id])
+		@favorites = @user.favorites.all
 	end
 	helper_method :current_user
 	private 

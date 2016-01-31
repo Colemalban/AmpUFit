@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
  
 
-  get 'friendships/create'
 
-  get 'friendships/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -16,14 +14,9 @@ resources  :categories do
 		resources :exercises do
 			put 'Upvote' => 'exercises#up'
 			put 'Downvote' => 'exercises#down'
+			post 'favorite'=>'favorites#create'
+			delete 'favorite'=>'favorites#destroy'
 		end
-	end
-end
-resources :friendables do 
-	 member do
-		put 'friend_request'
-		put 'friend_request_accept'
-		delete 'friend_request_reject'
 	end
 end
 get '/map', to: 'map#index'
@@ -35,7 +28,8 @@ post '/login',to:"sessions_controller#create"
 delete '/logout',to:"sessions_controller#destroy"
 post '/categories', to: "categories#create"
 resources :users   
-	
+
+
   root 'categories#index'
 
 
