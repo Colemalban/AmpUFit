@@ -3,7 +3,7 @@
 <h1><%= @workout.name %> amputees</h1>
 <p class="lead"> All of these exercises are meant to help your body stay as pain-free as possible</p>
 <p>For new amputees or for amputees who
-choose to not wear a leg(s), you can still
+choose to not wear a prosthetic(s), you can still
 do core exercises, abduction/adduction
 exercises, back extensions and pelvic
 tilts to strengthen the ligaments and
@@ -30,7 +30,7 @@ moves. </p>
 	<div class="panel-body">
 		<table class="table">
 		<% var.exercises.each  do |workout|%>
- 			<tr> <td> <span><%=link_to workout.name,category_workout_category_exercise_path(@workout,var,workout)%></span> </td> </tr>
+ 			<tr> <td> <span><%=link_to workout.name,category_workout_category_exercise_path(@workout,var,workout)%> </span> </td> </tr>
  			<%end%>	
 			<tr> <td> <%= link_to "Add a new Exercise", new_category_workout_category_exercise_path(@workout,var) %> </td> <td>	
 			</table>

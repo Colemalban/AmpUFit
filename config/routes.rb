@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 resources  :categories do
 	resources :workout_categories do
-		resources :exercises
+		resources :exercises do
+			put 'Upvote' => 'exercises#up'
+			put 'Downvote' => 'exercises#down'
+		end
 	end
 end
 resources :friendables do 
