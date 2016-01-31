@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_filter :authorize,except:[:new,:create]
 	def new
 	end
 	def create 
@@ -10,6 +11,9 @@ class UsersController < ApplicationController
 			redirect_to '/signup'
 		end
 
+	end
+	def show
+		@user = User.find(params[:id])
 	end
 	helper_method :current_user
 	private 
