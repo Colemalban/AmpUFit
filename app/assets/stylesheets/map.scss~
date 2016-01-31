@@ -5,7 +5,7 @@
 
 #map {
      padding: 25%;
-     margin: 0 auto 0 auto;
+     margins: 0 auto;
 
 }
 
