@@ -13,7 +13,7 @@
 	<div class="panel-body">
 		<table class="table">
 		<% var.exercises.each  do |workout|%>
- 			<tr> <td> <span><%=workout.name%></span> </td> </tr>
+ 			<tr> <td> <span><%=link_to workout.name,category_workout_category_exercise_path(@workout,var,workout)%></span> </td> </tr>
  			<%end%>	
 			<tr> <td> <%= link_to "Add a new Exercise", new_category_workout_category_exercise_path(@workout,var) %> </td> <td>	
 			</table>

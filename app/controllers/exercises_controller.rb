@@ -4,6 +4,9 @@ class ExercisesController < ApplicationController
 		@exercise=Exercise.new
 		@workout_category=WorkoutCategory.find(params[:workout_category_id])
 	end
+	def show
+		@exercise = Exercise.find(params[:id])
+	end
 
 	def create
 		@category=Category.find(params[:category_id])
